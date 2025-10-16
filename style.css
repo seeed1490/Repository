@@ -1,16 +1,93 @@
+body {
+  font-family: 'Arial', sans-serif;
+  direction: rtl;
+  text-align: center;
+  background-color: #f9f9f9;
+  padding: 20px;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+.room {
+  stroke: #333;
+  stroke-width: 2;
+  cursor: pointer;
+}
+
+.available { fill: #4CAF50; }
+.booked { fill: #d9534f; cursor: not-allowed; }
+.selected { fill: #2196F3; }
+
+.corridor {
+  fill: #f0ad4e;
+  stroke: #333;
+  stroke-width: 2;
+}
+
+.stair {
+  fill: #5bc0de;
+  stroke: #333;
+  stroke-width: 2;
+  cursor: pointer;
+}
+
+.door {
+  fill: #8B4513;
+  stroke: #333;
+  stroke-width: 1;
+  cursor: pointer;
+}
+
+.elevator {
+  fill: #800080;
+  stroke: #333;
+  stroke-width: 2;
+  cursor: pointer;
+}
+
+.label {
+  font-size: 14px;
+  fill: white;
+  font-weight: bold;
+  pointer-events: none;
+}
+
+.label-corridor, .label-stair, .label-elevator {
+  font-size: 14px;
+  fill: black;
+  font-weight: bold;
+  pointer-events: none;
+}
+
+#room-info {
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.info-room     { color: #4CAF50; }
+.info-booked   { color: #d9534f; }
+.info-door     { color: #8B4513; }
+.info-elevator { color: #800080; }
+.info-stair    { color: #5bc0de; }
+
 #legend {
-  margin-top: 30px;
-  text-align: right;
-  display: inline-block;
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
   background: #fff;
   padding: 15px 20px;
   border: 1px solid #ccc;
   border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  z-index: 1000;
 }
 
 #legend h2 {
   margin-bottom: 10px;
-  font-size: 18px;
+  font-size: 16px;
   color: #333;
 }
 
@@ -22,7 +99,7 @@
 
 #legend li {
   margin: 5px 0;
-  font-size: 16px;
+  font-size: 14px;
   display: flex;
   align-items: center;
   gap: 8px;
@@ -30,7 +107,7 @@
 
 .legend-box {
   display: inline-block;
-  width: 20px;
-  height: 20px;
+  width: 18px;
+  height: 18px;
   border: 1px solid #333;
 }
