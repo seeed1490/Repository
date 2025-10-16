@@ -1,16 +1,18 @@
 #legend {
-  margin-top: 30px;
-  text-align: right;
-  display: inline-block;
+  position: fixed;       /* تثبيت في الشاشة */
+  bottom: 20px;          /* المسافة من الأسفل */
+  left: 20px;            /* المسافة من اليسار */
   background: #fff;
   padding: 15px 20px;
   border: 1px solid #ccc;
   border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  z-index: 1000;         /* فوق باقي العناصر */
 }
 
 #legend h2 {
   margin-bottom: 10px;
-  font-size: 18px;
+  font-size: 16px;
   color: #333;
 }
 
@@ -22,7 +24,7 @@
 
 #legend li {
   margin: 5px 0;
-  font-size: 16px;
+  font-size: 14px;
   display: flex;
   align-items: center;
   gap: 8px;
@@ -30,7 +32,7 @@
 
 .legend-box {
   display: inline-block;
-  width: 20px;
-  height: 20px;
+  width: 18px;
+  height: 18px;
   border: 1px solid #333;
 }
