@@ -1,51 +1,36 @@
-body {
-  font-family: 'Arial', sans-serif;
-  direction: rtl;
-  text-align: center;
-  background-color: #f0f0f0;
-  padding: 20px;
+#legend {
+  margin-top: 30px;
+  text-align: right;
+  display: inline-block;
+  background: #fff;
+  padding: 15px 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
 }
 
-h1 {
+#legend h2 {
+  margin-bottom: 10px;
+  font-size: 18px;
   color: #333;
 }
 
-.seating-chart {
+#legend ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#legend li {
+  margin: 5px 0;
+  font-size: 16px;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
 }
 
-.row {
-  display: flex;
-  gap: 5px;
-}
-
-.seat {
-  padding: 10px 15px;
-  border: none;
-  border-radius: 5px;
-  color: white;
-  cursor: pointer;
-  font-weight: bold;
-}
-
-.available {
-  background-color: #4CAF50;
-}
-
-.booked {
-  background-color: #d9534f;
-  cursor: not-allowed;
-}
-
-.selected {
-  background-color: #2196F3;
-}
-
-#seat-info {
-  margin-top: 20px;
-  font-size: 18px;
-  color: #444;
+.legend-box {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #333;
 }
