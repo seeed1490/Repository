@@ -1,1 +1,52 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>مخطط المبنى التفاعلي</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>مخطط المبنى</h1>
 
+  <svg id="floor-plan" width="1200" height="800" xmlns="http://www.w3.org/2000/svg">
+    <!-- الغرف -->
+    <rect id="F1" class="room available" x="50" y="50" width="120" height="80"/>
+    <text x="100" y="95" class="label">F1</text>
+
+    <rect id="F2" class="room booked" x="200" y="50" width="120" height="80"/>
+    <text x="250" y="95" class="label">F2</text>
+
+    <!-- ممر -->
+    <rect class="corridor" x="50" y="160" width="720" height="60"/>
+    <text x="400" y="195" class="label-corridor">ممر رئيسي</text>
+
+    <!-- سلم -->
+    <rect class="stair" id="stair1" x="800" y="50" width="120" height="120"/>
+    <text x="830" y="120" class="label-stair">سلم</text>
+
+    <!-- باب -->
+    <rect id="door-F1" class="door" x="160" y="80" width="20" height="10"/>
+
+    <!-- مصعد -->
+    <rect id="elevator1" class="elevator" x="950" y="50" width="80" height="80"/>
+    <text x="970" y="95" class="label-elevator">مصعد</text>
+  </svg>
+
+  <div id="room-info"></div>
+
+  <!-- 🗂️ خريطة الألوان -->
+  <div id="legend">
+    <h2>خريطة الألوان</h2>
+    <ul>
+      <li><span class="legend-box available"></span> ✅ غرفة متاحة</li>
+      <li><span class="legend-box booked"></span> ❌ غرفة محجوزة</li>
+      <li><span class="legend-box door"></span> 🚪 باب</li>
+      <li><span class="legend-box elevator"></span> 🛗 مصعد</li>
+      <li><span class="legend-box stair"></span> 🪜 سلم</li>
+      <li><span class="legend-box corridor"></span> ممر رئيسي</li>
+    </ul>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
