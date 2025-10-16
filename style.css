@@ -20,24 +20,10 @@ h1 {
 .booked { fill: #d9534f; cursor: not-allowed; }
 .selected { fill: #2196F3; }
 
-.corridor {
-  fill: #f0ad4e;
+.special {
+  fill: #9E9E9E;
   stroke: #333;
   stroke-width: 2;
-}
-
-.stair {
-  fill: #5bc0de;
-  stroke: #333;
-  stroke-width: 2;
-  cursor: pointer;
-}
-
-.door {
-  fill: #8B4513;
-  stroke: #333;
-  stroke-width: 1;
-  cursor: pointer;
 }
 
 .elevator {
@@ -47,6 +33,19 @@ h1 {
   cursor: pointer;
 }
 
+.stair {
+  fill: #5bc0de;
+  stroke: #333;
+  stroke-width: 2;
+  cursor: pointer;
+}
+
+.street {
+  fill: #CCCCCC;
+  stroke: #999;
+  stroke-width: 1;
+}
+
 .label {
   font-size: 14px;
   fill: white;
@@ -54,7 +53,7 @@ h1 {
   pointer-events: none;
 }
 
-.label-corridor, .label-stair, .label-elevator {
+.label-elevator, .label-stair, .label-street {
   font-size: 14px;
   fill: black;
   font-weight: bold;
@@ -69,9 +68,53 @@ h1 {
 
 .info-room     { color: #4CAF50; }
 .info-booked   { color: #d9534f; }
-.info-door     { color: #8B4513; }
-.info-elevator { color: #800080; }
-.info-stair    { color: #5bc0de; }
+
+#edit-panel {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  background: #fff;
+  padding: 15px 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  z-index: 1000;
+  width: 220px;
+  text-align: right;
+}
+
+#edit-panel h2 {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+#edit-panel label {
+  display: block;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+#edit-panel select,
+#edit-panel input {
+  width: 100%;
+  padding: 5px;
+  margin-top: 5px;
+  font-size: 14px;
+}
+
+#edit-panel button {
+  margin-top: 10px;
+  width: 100%;
+  padding: 6px;
+  background-color: #2196F3;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#reset-labels { background-color: #d9534f; }
+#print-plan   { background-color: #5bc0de; }
 
 #legend {
   position: fixed;
@@ -110,4 +153,14 @@ h1 {
   width: 18px;
   height: 18px;
   border: 1px solid #333;
+}
+
+.legend-box.available { background-color: #4CAF50; }
+.legend-box.booked    { background-color: #d9534f; }
+.legend-box.selected  { background-color: #2196F3; }
+
+@media print {
+  #edit-panel, #legend, #room-info {
+    display: none;
+  }
 }
